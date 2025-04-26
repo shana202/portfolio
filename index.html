@@ -22,41 +22,68 @@
     <div id="projects">
         <h3>Projects</h3>
             <h4>Project 1</h4>
-            <div class="carousel-container">
+            <div class="carousel-container" id="carousel1">
 
-                <div class="carousel-slide fade">
-                  <img src="images/templates.jpg" alt="Image 1">
-                </div>
+            <div class="carousel-slide fade">
+              <img src="images/templates.jpg" alt="Image 1">
+            </div>
             
-                <div class="carousel-slide fade">
-                  <img src="images/navigation.jpg" alt="Image 2">
-                </div>
+            <div class="carousel-slide fade">
+              <img src="images/navigation.jpg" alt="Image 2">
+            </div>
             
-                <div class="carousel-slide fade">
-                  <img src="images/AMC.png" alt="Image 3">
-                </div>
+            <div class="carousel-slide fade">
+              <img src="images/AMC.png" alt="Image 3">
+            </div>
 
-                <div class="carousel-slide fade">
-                  <img src="images/college.png" alt="Image 4">
+            <div class="carousel-slide fade">
+              <img src="images/college.png" alt="Image 4">
+            </div>
             
-                <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-                <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <a class="prev" onclick="plusSlides(-1, 'carousel1')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'carousel1')">&#10095;</a>
             
-                <div class="dot-container">
-                  <span class="dot" onclick="currentSlide(1)"></span> 
-                  <span class="dot" onclick="currentSlide(2)"></span> 
-                  <span class="dot" onclick="currentSlide(3)"></span> 
-                </div>
+            <div class="dot-container">
+              <span class="dot" onclick="currentSlide(1, 'carousel1')"></span> 
+              <span class="dot" onclick="currentSlide(2, 'carousel1')"></span> 
+              <span class="dot" onclick="currentSlide(3, 'carousel1')"></span>
+              <span class="dot" onclick="currentSlide(4, 'carousel1')"></span> 
+            </div>
               </div>
+            <p>Website Redesign for XYZ Corp</p>
+            
+            <h4>Project 2</h4>
+            <div class="carousel-container" id="carousel2">
+
+            <div class="carousel-slide fade">
+                <img src="images/wires.jpg" alt="Image 1">
+            </div>
+            
+            <div class="carousel-slide fade">
+                <img src="images/navigation-orda.jpg" alt="Image 2">
+            </div>
+
+            <div class="carousel-slide fade">
+                <img src="images/design-guide-orda.png" alt="Image 3">
+            </div>
+            
+            <a class="prev" onclick="plusSlides(-1, 'carousel2')">&#10094;</a>
+            <a class="next" onclick="plusSlides(1, 'carousel2')">&#10095;</a>
+            
+            <div class="dot-container">
+                <span class="dot" onclick="currentSlide(1, 'carousel2')"></span> 
+                <span class="dot" onclick="currentSlide(2, 'carousel2')"></span>
+                <span class="dot" onclick="currentSlide(3, 'carousel2')"></span>  
+            </div>
+            </div>
             <p>Website Redesign for XYZ Corp</p>
             <button id="openModal">Learn More</button>
             <div id="myModal" class="modal">
                 <div class="modal-content">
-                <span class="close">&times;</span>
-                <p>Some text in the Modal..</p>
+                  <span class="close">&times;</span>
+                  <p>Some text in the Modal..</p>
                 </div>
-            
-        
+              </div>
     </div>
     <div id="skills">
         <h3>Skills</h3>
@@ -72,9 +99,11 @@
     </div>
     <div id="contact">
         <h3>Contact</h3>
+        <address>
         <p>Email: smsilver@andrew.cmu.edu</p>
         <p>LinkedIn: <a href="https://www.linkedin.com/in/shana-silverman/" target="_blank">linkedin.com/in/shana-silverman</a></p>
         <p>GitHub: <a href="https://github.com/shana202/portfolio" target="_blank">github.com/shana202/portfolio</a></p>
+    </address>
     </div>
     <footer>
         <p>&copy; 2025 Shana Silverman. All rights reserved.</p>

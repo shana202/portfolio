@@ -26,30 +26,38 @@ window.onclick = function(event) {
 }
 
 //Carousal
-var slideIndex = 1;
-    showSlides(slideIndex);
+var slideIndices = {
+    'carousel1': 1,
+    'carousel2': 1,
+}
+//Initialize carousels
+showSlides(1, 'carousel1');
+showSlides(1, 'carousel2');
 
-    function plusSlides(n) {
-      showSlides(slideIndex += n);
-    }
+function plusSlides(n, carouselId) {
+    showSlides(slideIndices[carouselId] += n, carouselId);
+}
 
-    function currentSlide(n) {
-      showSlides(slideIndex = n);
-    }
+function currentSlide(n, carouselId) {
+    showSlides(slideIndices[carouselId] = n, carouselId);
+}
 
-    function showSlides(n) {
-      var i;
-      var slides = document.getElementsByClassName("carousel-slide");
-      var dots = document.getElementsByClassName("dot");
-      if (n > slides.length) {slideIndex = 1}    
-      if (n < 1) {slideIndex = slides.length}
-      for (i = 0; i < slides.length; i++) {
-          slides[i].style.display = "none";  
-      }
-      for (i = 0; i < dots.length; i++) {
-          dots[i].className = dots[i].className.replace(" active", "");
-      }
-      slides[slideIndex-1].style.display = "block";  
-      dots[slideIndex-1].className += " active";
+function showSlides(n, carouselId) {
+    var i;
+    var carousel = document.getElementById(carouselId);
+    var slides = carousel.getElementsByClassName("carousel-slide");
+    var dots = carousel.getElementsByClassName("dot");
+    
+    if (n > slides.length) {slideIndices[carouselId] = 1}    
+    if (n < 1) {slideIndices[carouselId] = slides.length}
+    
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
     }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndices[carouselId]-1].style.display = "block";  
+    dots[slideIndices[carouselId]-1].className += " active";
+}
           
