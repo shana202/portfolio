@@ -90,16 +90,56 @@
     </div>
     <div id="skills">
         <h3>Skills</h3>
-        <ul>
-            <li>Project Management</li>
-            <li>Cross-Functional Team Leadership</li>
-            <li>Website Development</li>
-            <li>Agile Methodologies</li>
-            <li>Stakeholder Engagement</li>
-            <li>User Experience Design</li>
-            <li>ADA Compliance</li>
-        </ul>
+        <div class="tab">
+          <button class="tablinks active" onclick="openTab(event, 'Tab1')">Programming Languages</button>
+          <button class="tablinks" onclick="openTab(event, 'Tab2')">Frameworks</button>
+          <button class="tablinks" onclick="openTab(event, 'Tab3')">Tools</button>
+        </div>
+      
+        <div id="Tab1" class="tabcontent" style="display: block;">
+          <h3>Programming Languages</h3>
+          <Ul>
+            <li>HTML</li>
+            <li>CSS</li>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>SQL</li>
+          </Ul>
+        </div>
+      
+        <div id="Tab2" class="tabcontent">
+          <h3>Frameworks</h3>
+          <UL>
+            <li>React</li>
+            <li>Node.js</li>
+          </UL>
+        </div>
+      
+        <div id="Tab3" class="tabcontent">
+          <h3>Tools</h3>
+          <UL>
+            <li>Git</li>
+            <li>JIRA</li>
+            <li>Figma</li>
+            <li>Adobe Creative Suite</li>
+            <li>Google Analytics</li>
+            <li>WordPress</li>
+            <li>Shopify</li>
+          </UL>
+        </div>
+      
+        
     </div>
+    <br>
+    <h3>Progress Bar</h3>
+    <p>Click the button to see your progress.</p>
+    <div class="progress-container">
+      <div class="progress-bar" id="myBar"></div>
+    </div>
+  
+    <br>
+    <button onclick="move()">See your progress</button> 
+  
     <div id="contact">
         <h3>Contact</h3>
         <address>
